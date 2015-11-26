@@ -1,7 +1,9 @@
 /*
      File: CustomView.m
- Abstract: Subclass of NSView which handles the drawing of the window content. Circle and pentagon graphics are used, switching between the two depending upon the window's level of transparency.
-  Version: 1.2
+ Abstract: Subclass of NSView which handles the drawing of the window content.
+ Circle and pentagon graphics are used, switching between the two depending upon the window's
+ level of transparency.
+  Version: 1.3
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,7 +43,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2009 Apple Inc. All Rights Reserved.
+ Copyright (C) 2011 Apple Inc. All Rights Reserved.
  
  */
 
@@ -69,7 +71,11 @@
 }
 
 /*
- When it's time to draw, this routine is called. This view is inside the window, the window's opaqueness has been turned off, and the window's styleMask has been set to NSBorderlessWindowMask on creation, so this view draws the all the visible content. The first two lines below fill the view with "clear" color, so that any images drawn also define the custom shape of the window.  Furthermore, if the window's alphaValue is less than 1.0, drawing will use transparency.
+ When it's time to draw, this routine is called. This view is inside the window, the window's
+ opaqueness has been turned off, and the window's styleMask has been set to NSBorderlessWindowMask
+ on creation, so this view draws the all the visible content. The first two lines below fill the view
+ with "clear" color, so that any images drawn also define the custom shape of the window.
+ Furthermore, if the window's alphaValue is less than 1.0, drawing will use transparency.
  */
 - (void)drawRect:(NSRect)rect {
     // Clear the drawing rect.

@@ -1,7 +1,9 @@
 /*
      File: CustomWindow.m
- Abstract: Subclass of NSWindow with a custom shape and transparency. Since the window will not have a title bar, -mouseDown: and -mouseDragged: are overriden so the window can be moved by dragging its content area.
-  Version: 1.2
+ Abstract: Subclass of NSWindow with a custom shape and transparency. Since the window will not have
+ a title bar, -mouseDown: and -mouseDragged: are overriden so the window can be moved by dragging
+ its content area.
+  Version: 1.3
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -41,11 +43,12 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2009 Apple Inc. All Rights Reserved.
+ Copyright (C) 2011 Apple Inc. All Rights Reserved.
  
  */
 
 #import "CustomWindow.h"
+
 #import <AppKit/AppKit.h>
 
 @implementation CustomWindow
@@ -53,9 +56,13 @@
 @synthesize initialLocation;
 
 /*
- In Interface Builder, the class for the window is set to this subclass. Overriding the initializer provides a mechanism for controlling how objects of this class are created.
+ In Interface Builder, the class for the window is set to this subclass. Overriding the initializer
+ provides a mechanism for controlling how objects of this class are created.
  */
-- (id)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag {
+- (id)initWithContentRect:(NSRect)contentRect
+                styleMask:(NSUInteger)aStyle
+                  backing:(NSBackingStoreType)bufferingType
+                    defer:(BOOL)flag {
     // Using NSBorderlessWindowMask results in a window without a title bar.
     self = [super initWithContentRect:contentRect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];
     if (self != nil) {
@@ -68,14 +75,16 @@
 }
 
 /*
- Custom windows that use the NSBorderlessWindowMask can't become key by default. Override this method so that controls in this window will be enabled.
+ Custom windows that use the NSBorderlessWindowMask can't become key by default. Override this method
+ so that controls in this window will be enabled.
  */
 - (BOOL)canBecomeKeyWindow {
     return YES;
 }
 
 /*
- Start tracking a potential drag operation here when the user first clicks the mouse, to establish the initial location.
+ Start tracking a potential drag operation here when the user first clicks the mouse, to establish
+ the initial location.
  */
 - (void)mouseDown:(NSEvent *)theEvent {    
     // Get the mouse location in window coordinates.
@@ -83,7 +92,8 @@
 }
 
 /*
- Once the user starts dragging the mouse, move the window with it. The window has no title bar for the user to drag (so we have to implement dragging ourselves)
+ Once the user starts dragging the mouse, move the window with it. The window has no title bar for
+ the user to drag (so we have to implement dragging ourselves)
  */
 - (void)mouseDragged:(NSEvent *)theEvent {
     NSRect screenVisibleFrame = [[NSScreen mainScreen] visibleFrame];
