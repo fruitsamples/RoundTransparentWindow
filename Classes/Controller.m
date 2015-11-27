@@ -2,7 +2,7 @@
      File: Controller.m
  Abstract: The Controller class implements the -changeTransparency: action, called when the slider
  on the window is moved.
-  Version: 1.3
+  Version: 1.4
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following

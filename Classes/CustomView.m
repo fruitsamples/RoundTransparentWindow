@@ -3,7 +3,7 @@
  Abstract: Subclass of NSView which handles the drawing of the window content.
  Circle and pentagon graphics are used, switching between the two depending upon the window's
  level of transparency.
-  Version: 1.3
+  Version: 1.4
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following

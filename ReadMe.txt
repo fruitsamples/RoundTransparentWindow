@@ -4,11 +4,11 @@ This sample code shows how to use Cocoa to create custom-shaped windows and/or t
 
 Build Requirements
 ==================
-Mac OS X 10.6.x or later
+Xcode 3.2, Mac OS X 10.6 Snow Leopard or later
 
 Runtime Requirements
 ====================
-Mac OS X 10.5.x or later
+Mac OS X 10.6 Snow Leopard or later
 
 Packaging List
 ==============
@@ -26,6 +26,7 @@ Subclass of NSView which handles the drawing of the window content. Circle and p
 
 Changes from Previous Versions
 ==============================
+1.4 - Updated for Xcode 4.
 1.3 - Updated for Mac OS X 10.6, now builds 3-way Universal (ppc, i386, x86_64)
 1.2 - Updated for Xcode Tools version 3.1 and Objective C 2.0.
 1.1 - Added override of -canBecomeKeyWindow so that controls in the window are enabled.

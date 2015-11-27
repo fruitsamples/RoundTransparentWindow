@@ -3,7 +3,7 @@
  Abstract: Subclass of NSWindow with a custom shape and transparency. Since the window will not have
  a title bar, -mouseDown: and -mouseDragged: are overriden so the window can be moved by dragging
  its content area.
-  Version: 1.3
+  Version: 1.4
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
